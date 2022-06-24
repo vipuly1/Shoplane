@@ -21,10 +21,10 @@
 
 @keyframes scaling{
     0%{
-        font-size: 380px;
+        transform: scale(0.7, 0.7);
         
     }
       100%{
-        font-size: 300px;
+         transform: scale(1, 1);
       }
 }

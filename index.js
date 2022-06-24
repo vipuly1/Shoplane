@@ -5,7 +5,10 @@ var cartLogo = document.getElementById("cart-logo")
 var clothingContainer = document.getElementById("clothing-card-container")
 var accessoriesContainer = document.getElementById("accessories-card-container")
 var noOfItems = document.getElementById("items__in__cart")
-noOfItems.innerHTML += localStorage.getItem("cartItemNo")
+
+localStorage.getItem("cartItemNo") ? noOfItems.innerHTML += localStorage.getItem("cartItemNo") : noOfItems.innerHTML = 0
+
+//noOfItems.innerHTML += localStorage.getItem("cartItemNo")
 
 function clothingCard(data,i){
     

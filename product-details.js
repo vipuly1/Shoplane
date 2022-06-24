@@ -129,9 +129,9 @@ cartLogo.addEventListener("click", function (e) {
 })
 
 function addtoLocalStorage(data) {
-  productArr = []
-  foundAtPos = -1
-  fromlocalStorage = localStorage.getItem("productData")
+  var productArr = []
+  var foundAtPos = -1
+  var fromlocalStorage = localStorage.getItem("productData")
   if (fromlocalStorage === null || fromlocalStorage === undefined) {
     data.quantity = 1
     data.totalprice = data.price

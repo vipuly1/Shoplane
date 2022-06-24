@@ -42,8 +42,8 @@ function renderCardInLocalStorage(){
         }
         
     }
-    totalSumPrice.innerHTML = "Total Amount: " + total;
-    totalitems.innerHTML = "Total Items: " + totalItems
+    totalSumPrice.innerHTML = "Total Amount: " + "Rs "+ total;
+    totalitems.innerHTML = "Total Items: " +totalItems
 }
 renderCardInLocalStorage()
 
