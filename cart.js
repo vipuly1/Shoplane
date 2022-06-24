@@ -1,5 +1,5 @@
 var noOfItems = document.getElementById("items__in__cart")
-noOfItems.innerHTML += localStorage.getItem("cartItemNo")
+localStorage.getItem("cartItemNo") ? noOfItems.innerHTML += localStorage.getItem("cartItemNo") : noOfItems.innerHTML = 0
 
 var cartIcon = document.getElementById("cart-icon")
 var cartLogo = document.getElementById("cart-logo")
@@ -48,9 +48,15 @@ function renderCardInLocalStorage(){
 renderCardInLocalStorage()
 
 placeOrder.addEventListener("click", function(e){
+    console.log(localStorage.getItem("cartItemNo"))
+    if(localStorage.getItem("cartItemNo") === null || localStorage.getItem("cartItemNo") === undefined || localStorage.getItem("cartItemNo") === "0"){
+        alert("No Items In the Cart")
+    }
+    else{
     window.location.href = "./checkout.html"
     removeCardFromLocalStorage()
     localStorage.setItem("cartItemNo", JSON.stringify(0))
+    }
 })
 
 

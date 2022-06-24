@@ -6,7 +6,7 @@ var cartIcon = document.getElementById("cart-icon")
 const parameter = location.search.split("=")[1]
 
 var noOfItems = document.getElementById("items__in__cart")
-noOfItems.innerHTML += localStorage.getItem("cartItemNo")
+localStorage.getItem("cartItemNo") ? noOfItems.innerHTML += localStorage.getItem("cartItemNo") : noOfItems.innerHTML = 0
 
 
 

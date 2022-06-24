@@ -7,5 +7,5 @@ cartLogo.addEventListener("click", function (e) {
 
 
 
-noOfItems.innerHTML += localStorage.getItem("cartItemNo")
+localStorage.getItem("cartItemNo") ? noOfItems.innerHTML += localStorage.getItem("cartItemNo") : noOfItems.innerHTML = 0
 
